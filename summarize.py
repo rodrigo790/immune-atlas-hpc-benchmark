@@ -54,7 +54,7 @@ def main():
             for info in threadpool_info()
         ],
     )
-    (OUT / "environment.json").write_text(json.dumps(record, indent=2))
+    (OUT / "environment.json").write_bytes(json.dumps(record, indent=2).encode("utf8"))
 
 
 if __name__ == "__main__":

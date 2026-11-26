@@ -10,7 +10,7 @@ Read section W19 of GSE336618. Exclude identifiers and control probes. Freeze a 
 
 ## Interpretation and scope
 
-Timings describe one Windows CPU host. OS page cache can persist across processes. Explained-variance agreement tests one numerical endpoint. Nextflow and Slurm definitions are supplied; the measured runs used the local Python entry point.
+Timings describe one Windows CPU host. OS page cache can persist across processes. Explained-variance agreement tests one numerical endpoint. The measured CPU runs used the local Python entry point. The Slurm profile remains untested on a cluster.
 
 ## Primary output
 
@@ -19,3 +19,6 @@ Timings describe one Windows CPU host. OS page cache can persist across processe
 ## Source
 
 [Study or method](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336618)
+
+
+The local benchmark ran on an Intel Core Ultra 9 185H. [Stage medians, speedup and parallel efficiency](../results/stage_scaling.csv) and [software and hardware](../results/environment.json) accompany the raw timings. The Actions workflow also runs the Nextflow worker on a synthetic matrix.

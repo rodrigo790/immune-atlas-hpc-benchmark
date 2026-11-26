@@ -1,0 +1,15 @@
+{
+  "cpu": "Intel(R) Core(TM) Ultra 9 185H",
+  "physical_cores": 16,
+  "logical_cpus": 22,
+  "ram_GiB": 31.6,
+  "python": "3.12.9",
+  "system": "Windows",
+  "blas": [
+    {
+      "internal_api": "openblas",
+      "version": "0.3.31.188.0",
+      "architecture": "Haswell"
+    }
+  ]
+}

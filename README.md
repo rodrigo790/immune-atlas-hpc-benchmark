@@ -8,7 +8,7 @@ At 30,000 cells and 1,000 targets, median PCA time over three fresh processes fe
 
 Read section W19 of GSE336618. Exclude identifiers and control probes. Freeze a seeded permutation and take nested samples of 2,000, 10,000 and 30,000 cells. Normalize library sizes, log transform and compute 12 randomized PCs. Start a fresh worker per repeat. Record stage time and sampled peak process RSS at 10 ms intervals.
 
-Timings describe one Windows CPU host. OS page cache can persist across processes. Explained-variance agreement tests one numerical endpoint. Nextflow and Slurm definitions are supplied; the measured runs used the local Python entry point.
+Timings describe one Windows CPU host. OS page cache can persist across processes. Explained-variance agreement tests one numerical endpoint. The measured CPU runs used the local Python entry point. The Slurm profile remains untested on a cluster.
 
 ## Reproduce
 
@@ -19,6 +19,7 @@ python -m pip install -r requirements.txt
 python -m unittest discover -v
 python verify.py
 python analysis.py
+python summarize.py
 ```
 
 The checksum command verifies the committed release. Reruns can change benchmark timings, compressed file timestamps and rendered graphics.
@@ -32,3 +33,6 @@ The checksum command verifies the committed release. Reruns can change benchmark
 - [Original data or method](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336618)
 
 The MIT license covers repository code. Original datasets, model weights and structural coordinates retain the terms of their providers. Only aggregate results are redistributed here.
+
+
+The local benchmark ran on an Intel Core Ultra 9 185H. [Stage medians, speedup and parallel efficiency](results/stage_scaling.csv) and [software and hardware](results/environment.json) accompany the raw timings. The Actions workflow also runs the Nextflow worker on a synthetic matrix.

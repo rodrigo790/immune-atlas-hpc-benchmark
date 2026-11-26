@@ -1,0 +1,8 @@
+{
+  "GSE336618_W19_exprMat_file.csv.gz": {
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE336nnn/GSE336618/suppl/GSE336618_W19_exprMat_file.csv.gz",
+    "sha256": "f1e8c6b492912292e6d16ba462474633994996b327395934d091633a819b85e4",
+    "bytes": 6559351,
+    "verified": "2026-11-26"
+  }
+}
